@@ -1,0 +1,34 @@
+{
+    "name": "GameControls",
+    "maps": [
+        {
+            "name": "BuildMenu",
+            "id": "ee713969-d970-4056-a226-c6662fe60cec",
+            "actions": [
+                {
+                    "name": "ToggleBuildMenu",
+                    "type": "Button",
+                    "id": "c873cf05-170e-4d2a-a6c9-7625e0364711",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "1bcb1f3f-66aa-4b12-a708-d7cdf4084336",
+                    "path": "<Keyboard>/tab",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ToggleBuildMenu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

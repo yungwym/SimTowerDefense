@@ -8,8 +8,12 @@ public class RoadSystemController : MonoBehaviour
     public GameObject straightRoadPrefab;
     public GameObject cornerRoadPrefab;
     public GameObject endRoadPrefab;
-    public GameObject threeWayPrefab;
-    public GameObject fourWayPrefab;
+    public GameObject threeWayRoadPrefab;
+    public GameObject fourWayRoadPrefab;
+
+    public GameObject doubleWideRoadPrefab;
+    public GameObject splitRoadPrefab;
+    public GameObject FunnelRoadPrefab;  
 
     public void CalculatePendingRoadTiles(List<GameObject> pendingRoadTiles)
     {
@@ -31,9 +35,7 @@ public class RoadSystemController : MonoBehaviour
                 tile.leftNeighbour.tileType == TileType.ROAD)
             {
                 Debug.Log("Straight Horizontal" + tile.GetLocation());
-                tile.GetComponent<MeshFilter>().mesh = straightRoadPrefab.GetComponent<MeshFilter>().sharedMesh;
-                tile.GetComponent<MeshRenderer>().materials = straightRoadPrefab.GetComponent<MeshRenderer>().sharedMaterials;
-                tile.gameObject.transform.Rotate(0, 90, 0);
+                SetMeshMaterialAndRotation(tile, straightRoadPrefab, 90.0f);
             }
             //Straight Vertical
             if (tile.topNeighbour.tileType == TileType.ROAD &&
@@ -42,9 +44,7 @@ public class RoadSystemController : MonoBehaviour
                     tile.leftNeighbour.tileType != TileType.ROAD)
             {
                 Debug.Log("Straight Vertical" + tile.GetLocation());
-                tile.GetComponent<MeshFilter>().mesh = straightRoadPrefab.GetComponent<MeshFilter>().sharedMesh;
-                tile.GetComponent<MeshRenderer>().materials = straightRoadPrefab.GetComponent<MeshRenderer>().sharedMaterials;
-                tile.gameObject.transform.Rotate(0, 0, 0);
+                SetMeshMaterialAndRotation(tile, straightRoadPrefab, 0.0f);
             }
 
 
@@ -55,9 +55,7 @@ public class RoadSystemController : MonoBehaviour
                     tile.leftNeighbour.tileType == TileType.ROAD)
             {
                 Debug.Log("Corner Top Right" + tile.GetLocation());
-                tile.GetComponent<MeshFilter>().mesh = cornerRoadPrefab.GetComponent<MeshFilter>().sharedMesh;
-                tile.GetComponent<MeshRenderer>().materials = cornerRoadPrefab.GetComponent<MeshRenderer>().sharedMaterials;
-                tile.gameObject.transform.Rotate(0, 270, 0);
+                SetMeshMaterialAndRotation(tile, cornerRoadPrefab, 270.0f);
             }
 
             //Corner Top Left
@@ -67,9 +65,7 @@ public class RoadSystemController : MonoBehaviour
                     tile.leftNeighbour.tileType != TileType.ROAD)
             {
                 Debug.Log("Corner Top Left" + tile.GetLocation());
-                tile.GetComponent<MeshFilter>().mesh = cornerRoadPrefab.GetComponent<MeshFilter>().sharedMesh;
-                tile.GetComponent<MeshRenderer>().materials = cornerRoadPrefab.GetComponent<MeshRenderer>().sharedMaterials;
-                tile.gameObject.transform.Rotate(0, 180, 0);
+                SetMeshMaterialAndRotation(tile, cornerRoadPrefab, 180.0f);
             }
 
             //Corner Bottom Right
@@ -79,11 +75,9 @@ public class RoadSystemController : MonoBehaviour
                     tile.leftNeighbour.tileType == TileType.ROAD)
             {
                 Debug.Log("Corner Bottom Right" + tile.GetLocation());
-                tile.GetComponent<MeshFilter>().mesh = cornerRoadPrefab.GetComponent<MeshFilter>().sharedMesh;
-                tile.GetComponent<MeshRenderer>().materials = cornerRoadPrefab.GetComponent<MeshRenderer>().sharedMaterials;
-                tile.gameObject.transform.Rotate(0, 0, 0);
+                SetMeshMaterialAndRotation(tile, cornerRoadPrefab, 0.0f);
             }
-
+             
 
             //Corner Bottom Left
             if (tile.topNeighbour.tileType == TileType.ROAD &&
@@ -92,10 +86,78 @@ public class RoadSystemController : MonoBehaviour
                     tile.leftNeighbour.tileType != TileType.ROAD)
             {
                 Debug.Log("Corner Bottom Left" + tile.GetLocation());
-                tile.GetComponent<MeshFilter>().mesh = cornerRoadPrefab.GetComponent<MeshFilter>().sharedMesh;
-                tile.GetComponent<MeshRenderer>().materials = cornerRoadPrefab.GetComponent<MeshRenderer>().sharedMaterials;
-                tile.gameObject.transform.Rotate(0, 90, 0);
+                SetMeshMaterialAndRotation(tile, cornerRoadPrefab, 90.0f);
+            }
+
+
+            //Threeway Facing Top
+            if (tile.topNeighbour.tileType == TileType.ROAD &&
+                    tile.bottomNeighbour.tileType != TileType.ROAD &&
+                    tile.rightNeighbour.tileType == TileType.ROAD &&
+                    tile.leftNeighbour.tileType == TileType.ROAD)
+            {
+                Debug.Log("Threeway Top" + tile.GetLocation());
+                SetMeshMaterialAndRotation(tile, threeWayRoadPrefab, 0.0f);
+            }
+
+            //Threeway Facing Bottom
+            if (tile.topNeighbour.tileType != TileType.ROAD &&
+                    tile.bottomNeighbour.tileType == TileType.ROAD &&
+                    tile.rightNeighbour.tileType == TileType.ROAD &&
+                    tile.leftNeighbour.tileType == TileType.ROAD)
+            {
+                Debug.Log("Threeway Top" + tile.GetLocation());
+                SetMeshMaterialAndRotation(tile, threeWayRoadPrefab, 180.0f);
+            }
+
+            //Threeway Facing Right
+            if (tile.topNeighbour.tileType == TileType.ROAD &&
+                    tile.bottomNeighbour.tileType == TileType.ROAD &&
+                    tile.rightNeighbour.tileType == TileType.ROAD &&
+                    tile.leftNeighbour.tileType != TileType.ROAD)
+            {
+                Debug.Log("Threeway Top" + tile.GetLocation());
+                SetMeshMaterialAndRotation(tile, threeWayRoadPrefab, 90.0f);
+            }
+
+
+            //Threeway Facing Left
+            if (tile.topNeighbour.tileType == TileType.ROAD &&
+                    tile.bottomNeighbour.tileType == TileType.ROAD &&
+                    tile.rightNeighbour.tileType != TileType.ROAD &&
+                    tile.leftNeighbour.tileType == TileType.ROAD)
+            {
+                Debug.Log("Threeway Top" + tile.GetLocation());
+                SetMeshMaterialAndRotation(tile, threeWayRoadPrefab, 270.0f);
+            }
+
+            //Fourway
+            if (tile.topNeighbour.tileType == TileType.ROAD &&
+                    tile.bottomNeighbour.tileType == TileType.ROAD &&
+                    tile.rightNeighbour.tileType == TileType.ROAD &&
+                    tile.leftNeighbour.tileType == TileType.ROAD)
+            {
+                Debug.Log("Threeway Top" + tile.GetLocation());
+                SetMeshMaterialAndRotation(tile, fourWayRoadPrefab, 0.0f);
             }
         }
     }
+     
+
+    private void SetMeshMaterialAndRotation(Tile tile, GameObject tilePrefab, float yRotation)
+    {
+        tile.b_available = false;
+        tile.GetComponent<MeshFilter>().mesh = tilePrefab.GetComponent<MeshFilter>().sharedMesh;
+        tile.GetComponent<MeshRenderer>().materials = tilePrefab.GetComponent<MeshRenderer>().sharedMaterials;
+        tile.gameObject.transform.Rotate(0, yRotation, 0);
+    }
+
+    public void SetTileAsDoubleWide(Tile tile)
+    {
+        tile.GetComponent<MeshFilter>().mesh = doubleWideRoadPrefab.GetComponent<MeshFilter>().sharedMesh;
+        tile.GetComponent<MeshRenderer>().materials = doubleWideRoadPrefab.GetComponent<MeshRenderer>().sharedMaterials;
+        tile.gameObject.transform.Rotate(0, 0, 0);
+    }
+
+
 }
