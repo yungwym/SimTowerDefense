@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 4722828777545043200}
   - component: {fileID: 8513211037340631717}
   - component: {fileID: 5891261489499567727}
-  - component: {fileID: 4599045889822257852}
+  - component: {fileID: -2433521051015439639}
   m_Layer: 0
   m_Name: Tile_FourWay
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32,7 +32,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8513211037340631717
 MeshFilter:
@@ -86,7 +86,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &4599045889822257852
+--- !u!114 &-2433521051015439639
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -95,16 +95,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5386599190986020794}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7931bd59ccac7e4fb8828b16b3fe66e, type: 3}
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileType: 0
-  tileItem: {fileID: 0}
-  topNeighbour: {fileID: 0}
-  rightNeighbour: {fileID: 0}
-  bottomNeighbour: {fileID: 0}
-  leftNeighbour: {fileID: 0}
-  neighbourTiles: []
-  row: 0
-  column: 0
-  tileNumber: 0
+  m_OverrideArea: 1
+  m_Area: 0
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff

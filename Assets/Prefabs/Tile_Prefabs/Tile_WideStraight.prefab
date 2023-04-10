@@ -11,10 +11,11 @@ GameObject:
   - component: {fileID: 927138164765796505}
   - component: {fileID: 4283486929730512700}
   - component: {fileID: 2060106433974588406}
-  - component: {fileID: 2685103936886607235}
+  - component: {fileID: -4487319854767312405}
+  - component: {fileID: -2762203143651641927}
   m_Layer: 0
   m_Name: Tile_WideStraight
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -86,7 +87,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &2685103936886607235
+--- !u!114 &-4487319854767312405
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -95,16 +96,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 546637131601343011}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7931bd59ccac7e4fb8828b16b3fe66e, type: 3}
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileType: 0
-  tileItem: {fileID: 0}
-  topNeighbour: {fileID: 0}
-  rightNeighbour: {fileID: 0}
-  bottomNeighbour: {fileID: 0}
-  leftNeighbour: {fileID: 0}
-  neighbourTiles: []
-  row: 0
-  column: 0
-  tileNumber: 0
+  m_OverrideArea: 1
+  m_Area: 0
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: 00000000
+--- !u!65 &-2762203143651641927
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 546637131601343011}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.9999999, y: 0.19999999, z: 0.99999994}
+  m_Center: {x: 0, y: 0.099999994, z: 0}

@@ -35,6 +35,15 @@ public partial class @GameControls : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""LeftMouseSelect"",
+                    ""type"": ""Button"",
+                    ""id"": ""561a6ed6-7515-48f5-a468-c2596bbcfc9b"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -48,6 +57,233 @@ public partial class @GameControls : IInputActionCollection2, IDisposable
                     ""action"": ""ToggleBuildMenu"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""09d2c098-6829-49c6-a9c4-deaffebdb29d"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": ""Press"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""LeftMouseSelect"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""CameraControls"",
+            ""id"": ""6ed500af-e069-4e8d-958c-f88dd35eae87"",
+            ""actions"": [
+                {
+                    ""name"": ""Vertical_Movement"",
+                    ""type"": ""Value"",
+                    ""id"": ""97dfb2e7-8ed4-4349-969b-6a30dfe30a39"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Horizontal_Movement"",
+                    ""type"": ""Button"",
+                    ""id"": ""4c564578-b47b-4f67-b4e5-34fb5a03c021"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Rotate"",
+                    ""type"": ""Value"",
+                    ""id"": ""1ec6d134-a329-4fab-8afc-c3a6cac327cd"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Zoom"",
+                    ""type"": ""Value"",
+                    ""id"": ""ffab30fa-5c76-4f15-b4d2-fb5cbd41136a"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Left_Mouse"",
+                    ""type"": ""Button"",
+                    ""id"": ""34320aaf-1ce4-4c12-92ad-9eabf7b0487d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Right_Mouse"",
+                    ""type"": ""Button"",
+                    ""id"": ""625ad94b-cda4-4012-b670-23766ccdadff"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": ""1D Axis"",
+                    ""id"": ""d9e37219-a1ae-4719-9825-7091db2365fa"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Rotate"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""50b9ddb9-0ed2-4927-9dab-005745747b4d"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Rotate"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""f4841367-96e9-43c8-9c92-44359ec8659d"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Rotate"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""1D Axis"",
+                    ""id"": ""28e589e9-1980-4e1e-9067-8032705569c6"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Horizontal_Movement"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""60902f48-b34a-430a-8c0f-10d867c84e7d"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Horizontal_Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""7579e6c0-cafc-4507-ab9b-0df824304610"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Horizontal_Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""1D Axis"",
+                    ""id"": ""1a2cdc28-300e-4760-bda6-ef7c7831e287"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Vertical_Movement"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""ff7a1834-406d-4223-be51-fd22f8fd283e"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Vertical_Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""1339a69a-1a20-4e25-b264-e79dafccd34f"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Vertical_Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""1D Axis"",
+                    ""id"": ""3287d556-b3c6-4e89-a2e8-0e3494082c27"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Zoom"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""73cfc49d-b705-4f4e-bacf-a06868f7cce6"",
+                    ""path"": ""<Keyboard>/f"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Zoom"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""cd25a9ab-ab98-4799-a85e-c111d7a932c1"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Zoom"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""61e5f7b2-221d-4aa6-943e-cb8ad0843398"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Left_Mouse"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""59e37817-46e7-4bb2-97dc-40088243247e"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Right_Mouse"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -57,6 +293,15 @@ public partial class @GameControls : IInputActionCollection2, IDisposable
         // BuildMenu
         m_BuildMenu = asset.FindActionMap("BuildMenu", throwIfNotFound: true);
         m_BuildMenu_ToggleBuildMenu = m_BuildMenu.FindAction("ToggleBuildMenu", throwIfNotFound: true);
+        m_BuildMenu_LeftMouseSelect = m_BuildMenu.FindAction("LeftMouseSelect", throwIfNotFound: true);
+        // CameraControls
+        m_CameraControls = asset.FindActionMap("CameraControls", throwIfNotFound: true);
+        m_CameraControls_Vertical_Movement = m_CameraControls.FindAction("Vertical_Movement", throwIfNotFound: true);
+        m_CameraControls_Horizontal_Movement = m_CameraControls.FindAction("Horizontal_Movement", throwIfNotFound: true);
+        m_CameraControls_Rotate = m_CameraControls.FindAction("Rotate", throwIfNotFound: true);
+        m_CameraControls_Zoom = m_CameraControls.FindAction("Zoom", throwIfNotFound: true);
+        m_CameraControls_Left_Mouse = m_CameraControls.FindAction("Left_Mouse", throwIfNotFound: true);
+        m_CameraControls_Right_Mouse = m_CameraControls.FindAction("Right_Mouse", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -117,11 +362,13 @@ public partial class @GameControls : IInputActionCollection2, IDisposable
     private readonly InputActionMap m_BuildMenu;
     private IBuildMenuActions m_BuildMenuActionsCallbackInterface;
     private readonly InputAction m_BuildMenu_ToggleBuildMenu;
+    private readonly InputAction m_BuildMenu_LeftMouseSelect;
     public struct BuildMenuActions
     {
         private @GameControls m_Wrapper;
         public BuildMenuActions(@GameControls wrapper) { m_Wrapper = wrapper; }
         public InputAction @ToggleBuildMenu => m_Wrapper.m_BuildMenu_ToggleBuildMenu;
+        public InputAction @LeftMouseSelect => m_Wrapper.m_BuildMenu_LeftMouseSelect;
         public InputActionMap Get() { return m_Wrapper.m_BuildMenu; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -134,6 +381,9 @@ public partial class @GameControls : IInputActionCollection2, IDisposable
                 @ToggleBuildMenu.started -= m_Wrapper.m_BuildMenuActionsCallbackInterface.OnToggleBuildMenu;
                 @ToggleBuildMenu.performed -= m_Wrapper.m_BuildMenuActionsCallbackInterface.OnToggleBuildMenu;
                 @ToggleBuildMenu.canceled -= m_Wrapper.m_BuildMenuActionsCallbackInterface.OnToggleBuildMenu;
+                @LeftMouseSelect.started -= m_Wrapper.m_BuildMenuActionsCallbackInterface.OnLeftMouseSelect;
+                @LeftMouseSelect.performed -= m_Wrapper.m_BuildMenuActionsCallbackInterface.OnLeftMouseSelect;
+                @LeftMouseSelect.canceled -= m_Wrapper.m_BuildMenuActionsCallbackInterface.OnLeftMouseSelect;
             }
             m_Wrapper.m_BuildMenuActionsCallbackInterface = instance;
             if (instance != null)
@@ -141,12 +391,98 @@ public partial class @GameControls : IInputActionCollection2, IDisposable
                 @ToggleBuildMenu.started += instance.OnToggleBuildMenu;
                 @ToggleBuildMenu.performed += instance.OnToggleBuildMenu;
                 @ToggleBuildMenu.canceled += instance.OnToggleBuildMenu;
+                @LeftMouseSelect.started += instance.OnLeftMouseSelect;
+                @LeftMouseSelect.performed += instance.OnLeftMouseSelect;
+                @LeftMouseSelect.canceled += instance.OnLeftMouseSelect;
             }
         }
     }
     public BuildMenuActions @BuildMenu => new BuildMenuActions(this);
+
+    // CameraControls
+    private readonly InputActionMap m_CameraControls;
+    private ICameraControlsActions m_CameraControlsActionsCallbackInterface;
+    private readonly InputAction m_CameraControls_Vertical_Movement;
+    private readonly InputAction m_CameraControls_Horizontal_Movement;
+    private readonly InputAction m_CameraControls_Rotate;
+    private readonly InputAction m_CameraControls_Zoom;
+    private readonly InputAction m_CameraControls_Left_Mouse;
+    private readonly InputAction m_CameraControls_Right_Mouse;
+    public struct CameraControlsActions
+    {
+        private @GameControls m_Wrapper;
+        public CameraControlsActions(@GameControls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Vertical_Movement => m_Wrapper.m_CameraControls_Vertical_Movement;
+        public InputAction @Horizontal_Movement => m_Wrapper.m_CameraControls_Horizontal_Movement;
+        public InputAction @Rotate => m_Wrapper.m_CameraControls_Rotate;
+        public InputAction @Zoom => m_Wrapper.m_CameraControls_Zoom;
+        public InputAction @Left_Mouse => m_Wrapper.m_CameraControls_Left_Mouse;
+        public InputAction @Right_Mouse => m_Wrapper.m_CameraControls_Right_Mouse;
+        public InputActionMap Get() { return m_Wrapper.m_CameraControls; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(CameraControlsActions set) { return set.Get(); }
+        public void SetCallbacks(ICameraControlsActions instance)
+        {
+            if (m_Wrapper.m_CameraControlsActionsCallbackInterface != null)
+            {
+                @Vertical_Movement.started -= m_Wrapper.m_CameraControlsActionsCallbackInterface.OnVertical_Movement;
+                @Vertical_Movement.performed -= m_Wrapper.m_CameraControlsActionsCallbackInterface.OnVertical_Movement;
+                @Vertical_Movement.canceled -= m_Wrapper.m_CameraControlsActionsCallbackInterface.OnVertical_Movement;
+                @Horizontal_Movement.started -= m_Wrapper.m_CameraControlsActionsCallbackInterface.OnHorizontal_Movement;
+                @Horizontal_Movement.performed -= m_Wrapper.m_CameraControlsActionsCallbackInterface.OnHorizontal_Movement;
+                @Horizontal_Movement.canceled -= m_Wrapper.m_CameraControlsActionsCallbackInterface.OnHorizontal_Movement;
+                @Rotate.started -= m_Wrapper.m_CameraControlsActionsCallbackInterface.OnRotate;
+                @Rotate.performed -= m_Wrapper.m_CameraControlsActionsCallbackInterface.OnRotate;
+                @Rotate.canceled -= m_Wrapper.m_CameraControlsActionsCallbackInterface.OnRotate;
+                @Zoom.started -= m_Wrapper.m_CameraControlsActionsCallbackInterface.OnZoom;
+                @Zoom.performed -= m_Wrapper.m_CameraControlsActionsCallbackInterface.OnZoom;
+                @Zoom.canceled -= m_Wrapper.m_CameraControlsActionsCallbackInterface.OnZoom;
+                @Left_Mouse.started -= m_Wrapper.m_CameraControlsActionsCallbackInterface.OnLeft_Mouse;
+                @Left_Mouse.performed -= m_Wrapper.m_CameraControlsActionsCallbackInterface.OnLeft_Mouse;
+                @Left_Mouse.canceled -= m_Wrapper.m_CameraControlsActionsCallbackInterface.OnLeft_Mouse;
+                @Right_Mouse.started -= m_Wrapper.m_CameraControlsActionsCallbackInterface.OnRight_Mouse;
+                @Right_Mouse.performed -= m_Wrapper.m_CameraControlsActionsCallbackInterface.OnRight_Mouse;
+                @Right_Mouse.canceled -= m_Wrapper.m_CameraControlsActionsCallbackInterface.OnRight_Mouse;
+            }
+            m_Wrapper.m_CameraControlsActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @Vertical_Movement.started += instance.OnVertical_Movement;
+                @Vertical_Movement.performed += instance.OnVertical_Movement;
+                @Vertical_Movement.canceled += instance.OnVertical_Movement;
+                @Horizontal_Movement.started += instance.OnHorizontal_Movement;
+                @Horizontal_Movement.performed += instance.OnHorizontal_Movement;
+                @Horizontal_Movement.canceled += instance.OnHorizontal_Movement;
+                @Rotate.started += instance.OnRotate;
+                @Rotate.performed += instance.OnRotate;
+                @Rotate.canceled += instance.OnRotate;
+                @Zoom.started += instance.OnZoom;
+                @Zoom.performed += instance.OnZoom;
+                @Zoom.canceled += instance.OnZoom;
+                @Left_Mouse.started += instance.OnLeft_Mouse;
+                @Left_Mouse.performed += instance.OnLeft_Mouse;
+                @Left_Mouse.canceled += instance.OnLeft_Mouse;
+                @Right_Mouse.started += instance.OnRight_Mouse;
+                @Right_Mouse.performed += instance.OnRight_Mouse;
+                @Right_Mouse.canceled += instance.OnRight_Mouse;
+            }
+        }
+    }
+    public CameraControlsActions @CameraControls => new CameraControlsActions(this);
     public interface IBuildMenuActions
     {
         void OnToggleBuildMenu(InputAction.CallbackContext context);
+        void OnLeftMouseSelect(InputAction.CallbackContext context);
+    }
+    public interface ICameraControlsActions
+    {
+        void OnVertical_Movement(InputAction.CallbackContext context);
+        void OnHorizontal_Movement(InputAction.CallbackContext context);
+        void OnRotate(InputAction.CallbackContext context);
+        void OnZoom(InputAction.CallbackContext context);
+        void OnLeft_Mouse(InputAction.CallbackContext context);
+        void OnRight_Mouse(InputAction.CallbackContext context);
     }
 }
