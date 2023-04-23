@@ -26,6 +26,8 @@ public class GameboardSectionController : MonoBehaviour
     //Enemy Prefabs 
     [SerializeField] private GameObject enemySpawnerPrefab;
 
+    private float timeToWaitForEnemySpawner = 5.0f;
+
     //ResourceTiles
     [SerializeField] List<GameObject> availableResourcesToSpawnList;
 
@@ -85,7 +87,7 @@ public class GameboardSectionController : MonoBehaviour
     //Enemy Spawner
     private IEnumerator SpawnEnemySpawner()
     {
-        yield return new WaitForSeconds(5.0f);
+        yield return new WaitForSeconds(timeToWaitForEnemySpawner);
 
         //Get random tile index from available tiles
         int randomTileIndex = Random.Range(0, blankTilesList.Count);
@@ -109,6 +111,12 @@ public class GameboardSectionController : MonoBehaviour
         //Remove and add tile to proper list 
         blankTilesList.Remove(tileToSpawnOn);
         enemySpawnTilesList.Add(tileToSpawnOn);
+
+        //Increase Time and Call Again
+        timeToWaitForEnemySpawner += 5.0f;
+
+        StartCoroutine(SpawnEnemySpawner());
+
     }
 
 

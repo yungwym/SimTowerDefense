@@ -52,8 +52,10 @@ public class ProjectileController : MonoBehaviour
         {
             collision.gameObject.GetComponent<EnemyController>().TakeDamage(damage);
 
-            Instantiate(impact_ParticleEffect, transform.position, transform.rotation);
+            GameObject particleEff = Instantiate(impact_ParticleEffect, transform.position, transform.rotation);
 
+
+            Destroy(particleEff, 2f);
             Destroy(gameObject);
         }
     }

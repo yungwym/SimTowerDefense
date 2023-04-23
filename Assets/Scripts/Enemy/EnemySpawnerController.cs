@@ -64,6 +64,15 @@ public class EnemySpawnerController : MonoBehaviour
         GameObject spawnedEnemy = Instantiate(enemyToSpawn, enemySpawnPoint.position, enemySpawnPoint.rotation);
         spawnedEnemy.GetComponent<EnemyController>().SetResourceTargetObjectsList(resourceTiles);
 
+        int randomInt = Random.Range(0, 3);
+
+        if (randomInt < 1)
+        {
+            Debug.Log("Sound");
+            AudioManager.audioManagerInstance.PlaySFX("Monster1");
+        }
+
+
         Debug.Log("Spawned Enemy");
     }
 

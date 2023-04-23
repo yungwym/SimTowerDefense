@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1987764472023479894}
   - component: {fileID: 3186911175226358259}
   - component: {fileID: 855360251204341049}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Ballista
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32,6 +32,7 @@ Transform:
   m_Children:
   - {fileID: 7519899907959812407}
   - {fileID: 369839515612492390}
+  - {fileID: 3025083225468013312}
   m_Father: {fileID: 1987764471844519872}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -98,7 +99,9 @@ GameObject:
   - component: {fileID: 3186911175180824677}
   - component: {fileID: 855360250892567727}
   - component: {fileID: -5446594900267115235}
-  m_Layer: 0
+  - component: {fileID: 5715204941172180727}
+  - component: {fileID: -5409522488641242537}
+  m_Layer: 2
   m_Name: Tower_Ballista
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114,12 +117,12 @@ Transform:
   m_GameObject: {fileID: 1215450653365593466}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.431, y: 0, z: -3.464}
-  m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1987764472023479894}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3186911175180824677
 MeshFilter:
@@ -187,6 +190,40 @@ MonoBehaviour:
   m_Area: 1
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
+--- !u!135 &5715204941172180727
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1215450653365593466}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 15
+  m_Center: {x: 0, y: 0.42237723, z: 0}
+--- !u!114 &-5409522488641242537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1215450653365593466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 214373bdbe913db4cac3130511cfc29e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 35
+  fireRate: 1
+  fireCountDown: 0
+  rotationSpeed: 10
+  towerTop: {fileID: 1987764472023479894}
+  projectilePrefab: {fileID: 8945093428237405288, guid: 8b3c53e480b95d54a9d37a441a712d7a, type: 3}
+  projectileSpawnPoint: {fileID: 3025083225468013312}
+  enemiesInRangeList: []
+  enemyTarget: {fileID: 0}
 --- !u!1 &2589277048087843486
 GameObject:
   m_ObjectHideFlags: 0
@@ -196,7 +233,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 369839515612492390}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Group
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -229,7 +266,7 @@ GameObject:
   - component: {fileID: 4321353028730562942}
   - component: {fileID: 9199640228441019708}
   - component: {fileID: 5176117185186939628}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -313,7 +350,7 @@ GameObject:
   - component: {fileID: 7519899907959812407}
   - component: {fileID: 407733980258306371}
   - component: {fileID: 8167059183052554528}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: bow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -386,3 +423,34 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &9037774493638006635
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3025083225468013312}
+  m_Layer: 2
+  m_Name: SpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3025083225468013312
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9037774493638006635}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.15, z: 0.25}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1987764472023479894}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

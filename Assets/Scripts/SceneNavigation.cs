@@ -16,6 +16,11 @@ public class SceneNavigation : MonoBehaviour
         SceneManager.LoadScene("InstructionScene");
     }
 
+    public void LoadSettingsScene()
+    {
+        SceneManager.LoadScene("SettingsScene");
+    }
+
     public void LoadGameScene()
     {
         SceneManager.LoadScene("GameScene");
@@ -27,7 +32,7 @@ public class SceneNavigation : MonoBehaviour
         UnityEditor.EditorApplication.isPlaying = false;
 
         #else
-        Application.Quit()
+        Application.Quit();
 
         #endif
     }
